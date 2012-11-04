@@ -1,0 +1,38 @@
+<%= content_for_sidebar do %>
+
+  <ul class="nav nav-tabs nav-stacked">
+    <li><%= link_to "Home", "/" %></li>
+<% end %>
+
+
+
+<div id='container'>abc</div>
+<script type="text/javascript">
+   var chart1;
+   jQuery(document).ready(function() {
+      chart1 = new Highcharts.Chart({
+         chart: {
+            renderTo: 'container',
+            type: 'column'
+         },
+         title: {
+            text: 'Beanstalkd Performence'
+         },
+         xAxis: {
+            categories: ["Fibonacci", "Factorial"]
+         },
+         yAxis: {
+            title: {
+               text: 'Time Taken'
+            }
+         },
+         series: [{
+            name: 'Run1',
+            data: [1, 5]
+         }, {
+            name: 'Run2',
+            data: [2]
+         }]
+      });
+   });
+</script>

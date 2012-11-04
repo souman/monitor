@@ -11,6 +11,8 @@ BaseApp::Application.routes.draw do
 
   end
 
+  resources :time_trackers
+
   root :to => "pages#index"
   match "*rest" => "pages#index"
 
